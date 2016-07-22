@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Author: Nigel Finley, July 2016. This is my first homework assignement in the UT Bootcamp
+making a basic portfolio site -->
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+	<title>Nigel Finley Porfolio</title>
+	<!-- This links your CSS style sheet to your html pages -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- The 'rel' represents a 'relative' pathway.  It matches a file inside current directory's 'assets' folder.-->
+
+
+</head>
+
+<body>
+
+	<div class="header">
+		<h1> Nigel Finley </h1>
+
+		<div class="nav nav-pils"> <!-- consider using Bootstrap here for the nav bar -->
+		 	<ul>
+		 		<li>About |</li> 
+		 		<li>Portfolio |</li>
+		 		<li> Contact</li> 
+			</ul>
+		</div>
+
+	</div>
+
+
+
+	<div class="container">
+		<!-- This section contains the bio information -->
+		<div class="main-section" id="about-me">
+			<h2> About Me </h2>
+
+			<!-- Need to insert a grey line break here, read how to do this -->
+			<hr> <!--This should create a solid grey line  -->
+
+			<!-- Insert profile picture here and wrap the text around it -->
+			<img src="assets/images/ProfilePic.jpg">
+			<!-- Insert Bio paragraphs here -->
+			<!-- Create links that have pop up pictures when you hover over them, like for the band and maybe soccer -->
+			<p> Nigel Finley here. I am working towards being a full-stack developer through the UT Bootcamp classes here in Austin, Texas. I am an avid soccer player and fan and I play music in a few bands locally. 
+			</p>
+		</div> 
+		
+<!-- This section contains the contact information section including linkedin, github and finleycode blog -->
+		<div class="sidebar" id="contact-info">
+			<h3> Connect with Me</h3>
+			
+			<!-- This is a solid grey line -->
+			<hr>
+				
+			<!-- Insert three images that have hyperlinks -->
+			<a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
+			<a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
+			<a href="thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
+
+		</div>
+		
+
+	</div>
+
+	<div class="footer-decoration">
+	</div>
+
+<!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
+	<footer>
+	
+		<p> (c) Copyright 2016. Nigel Finley </p>
+
+
+	</footer>
+
+
+
+
+</body>
+</html>
