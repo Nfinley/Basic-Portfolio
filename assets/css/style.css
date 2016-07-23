@@ -1,4 +1,5 @@
 /*
+Instructions: 
 Heading fonts use font-family: 'Georgia', Times, Times New Roman, serif;
 All other fonts use 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 Teal color (used for headings and backgrounds): #4aaaa5
@@ -10,82 +11,111 @@ Main content background color: #ffffff
 Main content border color: #dddddd
 */
 
+/*QUESTIONS or tasks:
+
+1. How to set a background image using a local file path not a url
+2. Figure out how to set up border and colors
+
+*/
+
+
+
+/*Main content area is 960px wide*/
 body {
+	width: 960px;
+	
+	
+}
+
+header, h1, h2, h3 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+
+
+/*This styles the very top of the page within the class 'header'*/
+header {
+	background-color: #ffffff;
+	border-bottom: solid #cccccc;
+	/*display: inline-block; */
+	margin-top: -10px;
 
 
 }
 
-.header, h1, h2, h3 {
-	font-family: 'Georgia', Times, Times New Roman, serif;
+/*Need to make this float right*/
+nav {	
+	font-size: 15px;
+	float: right;
+	margin-top: -75px;
+	/*letter-spacing: 5px;*/
+
+}
+h1 {
+	background-color: #4aaaa5;   /* Use this color for the heading */
+	color: #FEFEF9;
+	padding: 20px;  /* This padding looks good */
+	width:200px;
+
+}
+
+h2, h3 {
+	color: #4aaaa5; /* Use this color for all headings within the body */ 
+}
+
+nav a, p, footer {
+	color: #777777;
 }
 
 p {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-/*This styles the very top of the page within the class 'header'*/
-.header {
-	background-color: #ffffff;
-	border-color: #cccccc;
-	display: inline-block; /* This isn't working correctly */
-	margin-top: -10px;
-	
+nav a {
+	text-decoration: none;
+}
+
+/*nav a:hover:after {
+	content: url(http://gdriv.es/finleycode/NigelPic.jpg);
+	display: block;*/
 
 }
 
-h1 {
-	background-color: #4aaaa5;  /* Use this color for the heading */
-	color: #FEFEF9;
-	padding: 20px;
-
-}
-
-h2 {
-	color: #4aaaa5; /* Use this color for all headings within the body */ 
-}
-
-hr {
-
-}
-
-.nav {	/*Maybe use bootstrap to get the header and nav bar to line up right*/
-}
-
-
-/*Container area class is 960px wide*/
-.container {
-	width: 960px;
-	background: url(assets/images/concrete_seamless.png) center center no-repeat;
-
-}
 
 /*Main-section class is 650px wide */
-.main-section {
+section {
+	background: url(http://gdriv.es/finleycode/UT_Bootcamp_assets/concrete_seamless.png) center center;
 	width:650px;
-	background-color: #ffffff;
-	border-color: #dddddd;
-	background-color:#ffffff;
-
+	background-color: red;
+	display: inline-block;
+	
 }
 
-.main-section img {
+section img {
 	height:200px;
 	width: 200px;
 
 
 }
 
-/*Sidebar class is 270px */
-.sidebar {
+/*This styles the 'aside' tag. This container must be 270px */
+aside {
 	width: 270px;
 	border-color: #dddddd;
 	background-color:#ffffff;
+	float:right;
 
 }
 
+hr {
+
+}
 /*This sytles the paragraph bio 'About Me'*/
 #about-me {
-
+	/*width:300px;
+	background-color: #ffffff;
+	border-color: #dddddd;
+	margin: 20px 0;*/
 
 }
 
@@ -101,7 +131,7 @@ a img {
 
 /*This is for the thin teal line that sits right above the footer*/
 .footer-decoration {
-
+	background-color: #4aaaa5;  /*a teal background color for the thin line*/
 }
 
 /*This styles the footer. Also make it a sticky footer so it doesn't move from the bottom of the page*/
@@ -110,5 +140,7 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 20px;
+	clear: both;
+	border-top: solid 5px #4aaaa5;
 
 }
