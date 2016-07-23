@@ -15,18 +15,23 @@ Main content border color: #dddddd
 
 1. How to set a background image using a local file path not a url
 2. Figure out how to set up border and colors
+3. What do they mean by the 'entire content area'? 
+4. Wrap text in the paragraph
+5. Try and use overflow to make the header and footer continue to the right
 
 */
+
+
 
 
 
 /*Main content area is 960px wide*/
 body {
 	width: 960px;
-	
-	
-}
+	background: url(http://gdriv.es/finleycode/UT_Bootcamp_assets/concrete_seamless.png) center center;
+	margin:0;
 
+}
 header, h1, h2, h3 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
 }
@@ -37,8 +42,8 @@ header, h1, h2, h3 {
 header {
 	background-color: #ffffff;
 	border-bottom: solid #cccccc;
-	/*display: inline-block; */
-	margin-top: -10px;
+	margin-top: -25px;
+	padding: 0 75px 0 75px;
 
 
 }
@@ -54,8 +59,10 @@ nav {
 h1 {
 	background-color: #4aaaa5;   /* Use this color for the heading */
 	color: #FEFEF9;
-	padding: 20px;  /* This padding looks good */
+	padding: 40px 40px 30px 40px;  /* This padding looks good */
 	width:200px;
+	margin:0;
+
 
 }
 
@@ -81,19 +88,36 @@ nav a {
 
 }
 
+/*Using the container tag to define the area where the background image goes*/
+.container {
+	width:960px;
+	height: 600px;
+	background-color: red !important;
+	
+	
+}
+/*This combines the section and aside tag in order to write less CSS and styles 
+attributes of border, backgroud-color and margin*/
+section, aside {
+	border: solid 1px #dddddd; /* main content border color */
+	background-color:#ffffff;
+	margin: 40px 0 40px 0;
+}
 
 /*Main-section class is 650px wide */
 section {
-	background: url(http://gdriv.es/finleycode/UT_Bootcamp_assets/concrete_seamless.png) center center;
-	width:650px;
-	background-color: red;
+	width: 650px;
+	height: 400px;
 	display: inline-block;
+	margin-right: 20px;
 	
 }
 
 section img {
 	height:200px;
 	width: 200px;
+	padding: 20px;
+	display: inline-block;
 
 
 }
@@ -101,13 +125,14 @@ section img {
 /*This styles the 'aside' tag. This container must be 270px */
 aside {
 	width: 270px;
-	border-color: #dddddd;
-	background-color:#ffffff;
 	float:right;
 
 }
 
 hr {
+	
+	border-top: solid 2px #dddddd;
+	margin: 20px;
 
 }
 /*This sytles the paragraph bio 'About Me'*/
@@ -116,6 +141,7 @@ hr {
 	background-color: #ffffff;
 	border-color: #dddddd;
 	margin: 20px 0;*/
+
 
 }
 
