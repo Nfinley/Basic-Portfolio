@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- Author: Nigel Finley, July 2016. This is the second of two homework assignements in the UT Bootcamp assigned the first week of class (July 20th, 2016). It consists of
-making a basic portfolio site to include (within the index page): 
+making a basic portfolio site to include (within the portfolio page): 
 1. A header with a nav bar
-2. A section with a biography, the 'about me' section and a profile image
+2. A section images and text linking to all of my portfolio work
 3. An aside container that contains 'connect with me' links
 4. A 'sticky' footer: one that doesn't move when the content changes size
  -->
@@ -12,7 +12,7 @@ making a basic portfolio site to include (within the index page):
     <meta charset="UTF-8">
     <title>Nigel Finley Porfolio</title>
     <!-- This style sheet helps with browser inconsistencies -->
-     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <!-- This links your CSS style sheet to your html pages -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -25,34 +25,39 @@ making a basic portfolio site to include (within the index page):
             <h1> Nigel Finley </h1>
             <!-- Nav bar for page -->
             <nav>
-                <a href="index.html">About</a> | <a href="porfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
+                <a href="index.html">About</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
             </nav>
         </header>
         <div class="container">
             <!-- This section contains the bio information; figure out how to make this work for all html pages -->
             <section class="main-section">
                 <!--Main section header -->
-                <h2> Contact </h2>
+                <h2> Portfolio </h2>
                 <hr>
                 <!--This creates a solid grey line  -->
-                <!-- Create a web form -->
-                <form action="contact_form.asp">
-                    Name
-                    <br>
-                    <input type="text" name="FirstName" value="John Smith">
-                    <br> Email
-                    <br>
-                    <input type="email" name="Email" value="example@gmail.com">
-                    <br>
-                    <!-- Look up to set the columns here in html, it is quick and dirty way, not preferred -->
-                    Message
-                    <br>
-                    <!-- Set the message area as a textarea instead of form -->
-                    <textarea name="textarea" rows="10">
-                    </textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
+                <!-- Portfolio page using image links and banners over the images -->
+                <div class="portfolio">
+                    <a href="#"><img src="assets/images/hangman2.jpg" alt="Hangman"></a><h4>Hangman</h4>
+                   </div> 
+                <div class="portfolio">
+                    <a href="#"><img src="assets/images/RPG.jpg" alt="RPG Game"></a>
+                          <h4>RPG Game</h4>
+                </div>
+              
+                <div class="portfolio">
+                    <a href="#"><img src="assets/images/trivia.jpg" alt="Trivia Game"></a>
+                    <h4>Trivia Game</h4>
+                    </div>
+
+                    <div class="portfolio">
+                    <a href="#"><img src="assets/images/rutgers.jpg" alt="Rutgers Info Widget"></a><h4>Rutgers Info Widget</h4>
+                    </div>
+
+                    <div class="portfolio">
+                    <a href="#"><img src="assets/images/rockpaper.jpg" alt="Rock Paper Scissors"></a><h4>Rock Paper Scissors</h4>
+                    </div>
+               
+               
             </section>
             <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
             <aside>
@@ -67,15 +72,17 @@ making a basic portfolio site to include (within the index page):
                     <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
                 </div>
             </aside>
+            <!-- For the sticky footer -->
+            <div class="push"></div>
         </div>
         <!-- This div container is for the teal line that sits right above the footer -->
         <div class="footer-decoration">
         </div>
-        <!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
+        <!-- This is the footer which needs to contain a copyright notice and my name. -->
         <footer>
             <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
         </footer>
-   	</div>
+    </div>
 </body>
 
 </html>

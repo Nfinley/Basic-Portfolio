@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- Author: Nigel Finley, July 2016. This is the second of two homework assignements in the UT Bootcamp assigned the first week of class (July 20th, 2016). It consists of
-making a basic portfolio site to include (within the index page): 
+making a basic portfolio site to include (within the contact page): 
 1. A header with a nav bar
-2. A section with a biography, the 'about me' section and a profile image
+2. A section with a form to contact me
 3. An aside container that contains 'connect with me' links
 4. A 'sticky' footer: one that doesn't move when the content changes size
  -->
@@ -11,6 +11,8 @@ making a basic portfolio site to include (within the index page):
 <head>
     <meta charset="UTF-8">
     <title>Nigel Finley Porfolio</title>
+    <!-- This style sheet helps with browser inconsistencies -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <!-- This links your CSS style sheet to your html pages -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -23,7 +25,7 @@ making a basic portfolio site to include (within the index page):
             <h1> Nigel Finley </h1>
             <!-- Nav bar for page -->
             <nav>
-                <a href="index.html">About</a> | <a href="porfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
+                <a href="index.html">About</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
             </nav>
         </header>
         <div class="container">
@@ -65,6 +67,8 @@ making a basic portfolio site to include (within the index page):
                     <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
                 </div>
             </aside>
+            <!-- For the sticky footer -->
+            <div class="push"></div>
         </div>
         <!-- This div container is for the teal line that sits right above the footer -->
         <div class="footer-decoration">
@@ -73,7 +77,7 @@ making a basic portfolio site to include (within the index page):
         <footer>
             <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
         </footer>
-   	</div>
+    </div>
 </body>
 
 </html>
