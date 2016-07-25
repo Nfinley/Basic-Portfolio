@@ -97,7 +97,7 @@ nav {
 	font-size: 15px;
 	float: right;
 	margin-top: -50px;
-	margin-right: 125px;
+	/*margin-right: 125px;*/
 	/*letter-spacing: 5px; */
 
 }
@@ -138,6 +138,9 @@ nav a {
 nav a:hover {
 	border-bottom: solid 3px #4A5A66;
 	padding-bottom: 5px;
+	font-size: 18px;
+	transition: .5s;
+	/*font-weight: 25px;*/
 
 }
 
@@ -250,6 +253,7 @@ footer {
     -o-transition: all .5s ease;
     -ms-transition: all .5s ease;
     transition: all .5s ease;
+    width:200px; /*This supercedes the previous section img width of 250px */
 }
 
 
