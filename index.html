@@ -6,80 +6,68 @@ making a basic portfolio site to include (within the index page):
 3. An aside container that contains 'connect with me' links
 4. A 'sticky' footer: one that doesn't move when the content changes size
  -->
-
 <html>
 
 <head>
-  <meta charset="UTF-8">
-
-	<title>Nigel Finley Porfolio</title>
-	<!-- This links your CSS style sheet to your html pages -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- The 'rel' represents a 'relative' pathway.  It matches a file inside current directory's 'assets' folder.-->
-
-
+    <meta charset="UTF-8">
+    <title>Nigel Finley Porfolio</title>
+     <!-- This style sheet helps with browser inconsistencies -->
+     <link rel="stylesheet" type="text/css" href="reset.css">
+    <!-- This links your CSS style sheet to your html pages -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- The 'rel' represents a 'relative' pathway.  It matches a file inside current directory's 'assets' folder.-->
 </head>
 
 <body>
+    <!-- Master container for the entire page -->
+    <div class="master-container">
+        <header>
+            <!-- Header line for the page -->
+            <h1> Nigel Finley </h1>
+            <!-- Nav bar for page -->
+            <nav>
+                <a href="index.html">About</a> | <a href="porfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <div class="container">
+            <!-- This section contains the bio information; figure out how to make this work for all html pages -->
+            <section class="main-section">
+                <!--Main section header -->
+                <h2> About Me </h2>
+                <hr>
+                <!--This creates a solid grey line  -->
+                <!-- Create links that have pop up pictures when you hover over them, like for the band and maybe soccer -->
+                <p> <img class="profile-pic" src="assets/images/ProfilePic.jpg" alt="Profile Image"> Hello, world!. My name is Nigel Finley. I am working towards being a full-stack developer through the UT Bootcamp classes here in Austin, Texas. I am an avid soccer player and fan and I play music in a few bands locally. I live in south Austin with my wife and white mini-schnauzer.
+                </p>
+                <p> I really enjoy hiking, biking, snowboarding and swiming, when it is not 150 degrees outside. Majored in Music Business and currently work at Mood Media, a 360 experience design company but am looking for new challenges, hence the interest in web development. </p>
+<!-- 
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-	<header>
-		<!-- Header line for the page -->
-		<h1> Nigel Finley </h1>
-
-		<!-- Nav bar for page -->
-		<nav> 
-		 	
-		 	<a href="index.html">About</a> | <a href="porfolio.html">Portfolio</a> | <a href="contact.html">Contact</a> 
-			
-		</nav>
-
-	</header>
-	<div clas="container"> 
-		<!-- This section contains the bio information -->
-		<section id="about-me">
-			<h2> About Me </h2>
-
-			<!-- Need to insert a grey line break here, read how to do this -->
-			<hr> <!--This should create a solid grey line  -->
-
-			<!-- Insert profile picture here and wrap the text around it -->
-			<img src="assets/images/ProfilePic.jpg">
-			<!-- Insert Bio paragraphs here -->
-			<!-- Create links that have pop up pictures when you hover over them, like for the band and maybe soccer -->
-			<p> Nigel Finley here. I am working towards being a full-stack developer through the UT Bootcamp classes here in Austin, Texas. I am an avid soccer player and fan and I play music in a few bands locally. 
-			</p>
-		</section> 
-		
-<!-- This section contains the contact information section including linkedin, github and finleycode blog -->
-		<aside id="contact-info">
-			<h3> Connect with Me</h3>
-			
-			<!-- This is a solid grey line -->
-			<hr>
-				
-			<!-- Insert three images that have hyperlinks -->
-			<a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
-			<a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
-			<a href="thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
-
-		</aside>
-		
-	</div>
-	
-
-	<div class="footer-decoration">
-	</div>
-
-<!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
-	<footer>
-	
-		<p> (c) Copyright 2016. Nigel Finley </p>
-
-
-	</footer>
-
-
-
-
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. <p> -->
+            </section>
+            <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
+            <aside>
+                <div class="aside-content">
+                    <!-- Header for the aside content -->
+                    <h3> Connect with Me</h3>
+                    <!-- This is a solid grey line -->
+                    <hr>
+                    <!-- Image links to my pages, including github, linkedin and personal blog page -->
+                    <a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
+                    <a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
+                    <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
+                </div>
+            </aside>
+        </div>
+        <!-- This div container is for the teal line that sits right above the footer -->
+        <div class="footer-decoration">
+        </div>
+        <!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
+    
+        <footer>
+            <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
+        </footer>
+    </div>
 </body>
+
 </html>
