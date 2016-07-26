@@ -6,7 +6,7 @@ making a basic portfolio site to include (within the contact page):
 3. An aside container that contains 'connect with me' links
 4. A 'sticky' footer: one that doesn't move when the content changes size
  -->
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -18,9 +18,8 @@ making a basic portfolio site to include (within the contact page):
 </head>
 
 <body>
-   
-        <header>
-         <!-- A header-container that is the width of the project requirements, to make the content align -->
+    <header>
+        <!-- A header-container that is the width of the project requirements, to make the content align -->
         <div class="header-container">
             <!-- Header line for the page -->
             <h1> Nigel Finley </h1>
@@ -28,58 +27,56 @@ making a basic portfolio site to include (within the contact page):
             <nav>
                 <a href="index.html">About</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
             </nav>
-            </div>
-        </header>
-        <div class="container">
-            <!-- This section contains the bio information; figure out how to make this work for all html pages -->
-            <section class="main-section">
-                <!--Main section header -->
-                <h2> Contact </h2>
+        </div>
+    </header>
+    <div class="container">
+        <!-- This section contains the bio information; figure out how to make this work for all html pages -->
+        <section class="main-section">
+            <!--Main section header -->
+            <h2> Contact </h2>
+            <hr>
+            <!--This creates a solid grey line  -->
+            <!-- Create a web form -->
+            <form action="contact_form.asp">
+                Name
+                <br>
+                <input type="text" name="FirstName" value="John Smith">
+                <br> Email
+                <br>
+                <input type="email" name="Email" value="example@gmail.com">
+                <br>
+                Message
+                <br>
+                <!-- The message area inside the form -->
+                <textarea name="textarea" rows="10">
+                </textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
+        <aside>
+            <div class="aside-content">
+                <!-- Header for the aside content -->
+                <h3> Connect with Me</h3>
+                <!-- This is a solid grey line -->
                 <hr>
-                <!--This creates a solid grey line  -->
-                <!-- Create a web form -->
-                <form action="contact_form.asp">
-                    Name
-                    <br>
-                    <input type="text" name="FirstName" value="John Smith">
-                    <br> Email
-                    <br>
-                    <input type="email" name="Email" value="example@gmail.com">
-                    <br>
-                    <!-- Look up to set the columns here in html, it is quick and dirty way, not preferred -->
-                    Message
-                    <br>
-                    <!-- Set the message area as a textarea instead of form -->
-                    <textarea name="textarea" rows="10">
-                    </textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
-            </section>
-            <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
-            <aside>
-                <div class="aside-content">
-                    <!-- Header for the aside content -->
-                    <h3> Connect with Me</h3>
-                    <!-- This is a solid grey line -->
-                    <hr>
-                    <!-- Image links to my pages, including github, linkedin and personal blog page -->
-                    <a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
-                    <a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
-                    <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
-                </div>
-            </aside>
-            <!-- For the sticky footer -->
-            <div class="push"></div>
-        </div>
-        <!-- This div container is for the teal line that sits right above the footer -->
-        <div class="footer-decoration">
-        </div>
-        <!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
-        <footer>
-            <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
-        </footer>
-
+                <!-- Image links to my pages, including github, linkedin and personal blog page -->
+                <a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
+                <a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
+                <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
+            </div>
+        </aside>
+        <!-- For the sticky footer -->
+        <div class="push"></div>
+    </div>
+    <!-- This div container is for the teal line that sits right above the footer -->
+    <div class="footer-decoration">
+    </div>
+    <!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
+    <footer>
+        <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
+    </footer>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ making a basic portfolio site to include (within the portfolio page):
 3. An aside container that contains 'connect with me' links
 4. A 'sticky' footer: one that doesn't move when the content changes size
  -->
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -18,8 +18,7 @@ making a basic portfolio site to include (within the portfolio page):
 </head>
 
 <body>
-
-        <header>
+    <header>
         <!-- A header-container that is the width of the project requirements, to make the content align -->
         <div class="header-container">
             <!-- Header line for the page -->
@@ -29,61 +28,60 @@ making a basic portfolio site to include (within the portfolio page):
                 <a href="index.html">About</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
             </nav>
         </div>
-        </header>
-        <div class="container">
-            <!-- This section contains the bio information; figure out how to make this work for all html pages -->
-            <section class="main-section">
-                <!--Main section header -->
-                <h2> Portfolio </h2>
+    </header>
+    <div class="container">
+        <!-- This section contains the bio information; figure out how to make this work for all html pages -->
+        <section class="main-section">
+            <!--Main section header -->
+            <h2> Portfolio </h2>
+            <hr>
+            <!--This creates a solid grey line  -->
+            <!-- Portfolio page using image links and banners over the images -->
+            
+            <div class="portfolio">
+                <a href="#"><img src="assets/images/hangman2.jpg" alt="Hangman"></a>
+                <h4>Hangman</h4>
+            </div>
+            <div class="portfolio">
+                <a href="#"><img src="assets/images/RPG.jpg" alt="RPG Game"></a>
+                <h4>RPG Game</h4>
+            </div>
+            <div class="portfolio">
+                <a href="#"><img src="assets/images/trivia.jpg" alt="Trivia Game"></a>
+                <h4>Trivia Game</h4>
+            </div>
+            <div class="portfolio">
+                <a href="#"><img src="assets/images/rutgers.jpg" alt="Rutgers Info Widget"></a>
+                <h4>Rutgers Info Widget</h4>
+            </div>
+            <div class="portfolio">
+                <a href="#"><img src="assets/images/rockpaper.jpg" alt="Rock Paper Scissors"></a>
+                <h4>Rock Paper Scissors</h4>
+            </div>
+        </section>
+        <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
+        <aside>
+            <div class="aside-content">
+                <!-- Header for the aside content -->
+                <h3> Connect with Me</h3>
+                <!-- This is a solid grey line -->
                 <hr>
-                <!--This creates a solid grey line  -->
-                <!-- Portfolio page using image links and banners over the images -->
-                <div class="portfolio">
-                    <a href="#"><img src="assets/images/hangman2.jpg" alt="Hangman"></a><h4>Hangman</h4>
-                   </div> 
-                <div class="portfolio">
-                    <a href="#"><img src="assets/images/RPG.jpg" alt="RPG Game"></a>
-                          <h4>RPG Game</h4>
-                </div>
-              
-                <div class="portfolio">
-                    <a href="#"><img src="assets/images/trivia.jpg" alt="Trivia Game"></a>
-                    <h4>Trivia Game</h4>
-                    </div>
-
-                    <div class="portfolio">
-                    <a href="#"><img src="assets/images/rutgers.jpg" alt="Rutgers Info Widget"></a><h4>Rutgers Info Widget</h4>
-                    </div>
-
-                    <div class="portfolio">
-                    <a href="#"><img src="assets/images/rockpaper.jpg" alt="Rock Paper Scissors"></a><h4>Rock Paper Scissors</h4>
-                    </div>
-               
-               
-            </section>
-            <!-- This section contains the contact information section including linkedin, github and finleycode blog -->
-            <aside>
-                <div class="aside-content">
-                    <!-- Header for the aside content -->
-                    <h3> Connect with Me</h3>
-                    <!-- This is a solid grey line -->
-                    <hr>
-                    <!-- Image links to my pages, including github, linkedin and personal blog page -->
-                    <a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
-                    <a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
-                    <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
-                </div>
-            </aside>
-            <!-- For the sticky footer -->
-            <div class="push"></div>
-        </div>
-        <!-- This div container is for the teal line that sits right above the footer -->
-        <div class="footer-decoration">
-        </div>
-        <!-- This is the footer which needs to contain a copyright notice and my name. -->
-        <footer>
-            <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
-        </footer>
+                <!-- Image links to my pages, including github, linkedin and personal blog page -->
+                <a href="https://github.com/Nfinley/" class="github"><img src="assets/images/Github-Icon2.png" alt="Github Account"></a>
+                <a href="https://www.linkedin.com/in/nfinleymusic" class="linkedin"><img src="assets/images/LinkedIn-Icon.png" alt="LinkedIn Account"></a>
+                <a href="http://thefinleycode.com" class="blog"><img src="assets/images/Blog-Icon.png" alt="The Finley Code Blog"></a>
+            </div>
+        </aside>
+        <!-- For the sticky footer -->
+        <div class="push"></div>
+    </div>
+    <!-- This div container is for the teal line that sits right above the footer -->
+    <div class="footer-decoration">
+    </div>
+    <!-- This is the footer which needs to contain a copyright notice and my name. -->
+    <footer>
+        <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>
+    </footer>
 </body>
 
 </html>
