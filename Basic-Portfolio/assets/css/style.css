@@ -1,18 +1,35 @@
-/*
-Instructions: 
-Heading fonts use font-family: 'Georgia', Times, Times New Roman, serif;
-All other fonts use 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-Teal color (used for headings and backgrounds): #4aaaa5
-Regular font color (used for paragraphs and all text besides the headings) = #777777
-Main header background color: #ffffff
-Main header border color: #cccccc
-Footer background color: #666666
-Main content background color: #ffffff
-Main content border color: #dddddd
+/*Assignment One Instructions - (No Bootstrap)
+
+Inside your assignment1 folder, find your style.css file, it may be in assets/css. 
+At the bottom of styles.css you will write your media queries.
+
+Use three @media screen tags, each with one of these max-widths: 980px, 768px and 640px.
+You use 980px because you never want any of the content to be cut off. Since the desktop layout is about 960px wide, you want the media queries to kick in before your content gets cut off.
+768px is about the width of a tablet and 640px is about the width of a phone in landscape
+Make the layout match the following screenshots:
+
+index.html: 980px, 768px, 640px
+portfolio.html: 980px, 768px, 640px
+contact.html: 980px, 768px, 640px
+Make the position of the header static (the default positioning) when the screen is 640px wide. The header design takes up a lot of room; you don't want it to stick to the top of a small screen and leave no room for the rest of your site.
+
+Be sure to include the viewport tag in all your html files, otherwise your media-queries won't function like you'd expect on mobile devices.
+
+Protip: Use the Chrome extensions Window Resizer and Browser Width to see the browser dimensions in Chrome.
+
+Sets the entire html and body to baseline height and margin*/
+
+/*TO DO:
+
+1. Make sure to include viewport tags in all html files
+2. Ask about how to make the Nav bar not scroll across the page
+ when resizing
+ 4. Ask about which inspector should I use? Should I use the responsive
+ tool or use the image pixels on the screen (currently using this
+ and it is showing fine)
+ 5. Ask about screen scaling (do we need to make 
+ it look good from 980-768 or just 980?)
 */
-
-
-/*Sets the entire html and body to baseline height and margin*/
 
 html,
 body {
@@ -103,7 +120,7 @@ h1 {
     background-color: #4aaaa5;
     /* Use this color for the heading */
     color: #FEFEF9;
-    padding: 40px 40px 30px 40px;
+    padding: 30px 40px 30px 40px;
     /* This padding looks good */
     width: 200px;
     margin: 0;
@@ -172,10 +189,10 @@ aside {
 To get 650 width = 608 (width)+ 40px (padding)+ 2px (border) */
 
 section {
-    float: left;
-    width: 608px;
-    margin-right: 15px;
     margin-left: 25px;
+    float: left;
+    margin-right: 15px;
+    width: 608px;
 }
 
 
@@ -183,13 +200,13 @@ section {
 contained in the section container unless overidden later on */
 
 section img {
-    height: 200px;
+    height: 250px;
     width: 284px;
 }
 
 .main-section {
-    padding: 20px;
     overflow: auto;
+    padding: 20px;
 }
 
 
@@ -210,6 +227,8 @@ aside {
 .aside-content a img {
     height: 70px;
     width: 70px;
+    padding: 20px 1px 10px 0;
+  
 }
 
 
@@ -229,14 +248,6 @@ aside {
 hr {
     border-top: solid 2px #dddddd;
 }
-
-
-/*This is for the thin teal line that sits right above the footer*/
-
-.footer-decoration {
-    background-color: #4aaaa5;
-}
-
 
 /*This styles the footer.*/
 
@@ -272,7 +283,8 @@ footer {
     -o-transition: all .5s ease;
     -ms-transition: all .5s ease;
     transition: all .5s ease;
-    width: 200px;
+    width: 250px;
+    height:270px;
     /*This supercedes the previous section img width of 250px */
 }
 
@@ -413,7 +425,7 @@ input[type=submit]:hover {
 h4 {
     font-weight: normal;
     position: absolute;
-    top: 120px;
+    top: 170px;
     left: 0;
     width: 264px;
     background-color: #4aaaa5;
@@ -421,3 +433,114 @@ h4 {
     text-align: center;
     padding: 15px 10px;
 }
+
+
+
+/*Media Queries to ensure proper viewing on every device - responsiveness */
+@media screen and (max-width: 980px) {
+    html, body {
+        width:100%;
+        margin: 0;
+    }
+    .container  {
+        width:100%;
+    }
+
+    .header-container {
+        width:100%;
+    }
+    .main-section {
+        font-size: 1em;
+        height: auto;
+        width: 35%;
+    }
+    aside {
+        margin-right:40px;
+    }
+
+    nav{
+        margin-right: 80px;
+    }
+    
+    h1, section {
+       margin-left: 100px;
+    }
+
+    h1 {
+        padding: 30px 15px 30px 15px;
+    }
+
+    /*For the main.html page */
+    .profile-pic {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    /*For the Portfolio page*/
+    .image-container img {
+        width:100%;
+        margin: auto;
+    }
+    h4 {
+        width:100%;
+        padding: 15px 0;
+    }
+    
+    .portfolio-left, .portfolio-right {
+        float: none;
+        
+    }
+
+    .portfolio-left {
+        padding-right: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    html, body {
+        width:100%;
+        margin: 0;
+    }
+    .container  {
+        width:100%;
+    }
+
+    .header-container {
+        width:100%;
+    }
+
+    .main-section {
+        width: 85%;
+    }
+    aside {
+        width: 90%;
+        float:left;
+        margin-left: 25px;
+        margin-top: 0px;
+    }
+
+    h1, section {
+        margin-left: 25px;
+    }
+
+    .profile-pic {
+        float: left;
+        margin-right: 15px;
+        width: 250px;
+        height:270px;     
+    }
+
+
+}
+
+ @media screen and (max-width: 640px) {
+
+  .profile-pic {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    }
+
+
