@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<!-- Author: Nigel Finley, July 2016. This is the second of two homework assignements in the UT Bootcamp assigned the first week of class (July 20th, 2016). It consists of
-making a basic portfolio site to include (within the index page): 
-1. A header with a nav bar
-2. A section with a biography, the 'about me' section and a profile image
-3. An aside container that contains 'connect with me' links
-4. A 'sticky' footer: one that doesn't move when the content changes size
+<!-- Author: Nigel Finley, August 2016. This is assighment 1 of the second homework assignement in the UT Bootcamp assigned the second week of class (July 20th, 2016). It consists of taking the first portfolio page and using media queries to scale the page. 
  -->
-
 <html lang="en">
 
 <head>
@@ -14,7 +8,7 @@ making a basic portfolio site to include (within the index page):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel Finley Portfolio</title>
     <!-- This style sheet helps with browser inconsistencies -->
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- This links your CSS style sheet to your html pages -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- The 'rel' represents a 'relative' pathway.  It matches a file inside current directory's 'assets' folder.-->
@@ -26,16 +20,12 @@ making a basic portfolio site to include (within the index page):
         <!-- A header-container that is the width of the project requirements, to make the content align -->
         <div class="header-container">
             <!-- Header line for the page -->
-           
             <h1> Nigel Finley</h1>
-           
             <!-- Nav bar for page -->
             <!-- Using navBox for Media Queries -->
-           
             <nav>
                 <a href="main.html">About</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a>
             </nav>
-           
         </div>
     </header>
     <div class="container">
@@ -70,7 +60,6 @@ making a basic portfolio site to include (within the index page):
         <!-- For the sticky footer -->
         <div class="push"></div>
     </div>
-
     <!-- This is the footer which needs to contain a copyright notice and my name. Also make it a 'sticky footer' -->
     <footer>
         <p class="footer"> &copy; Copyright 2016 Nigel Finley </p>

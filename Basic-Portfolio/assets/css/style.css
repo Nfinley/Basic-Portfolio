@@ -19,16 +19,15 @@ Protip: Use the Chrome extensions Window Resizer and Browser Width to see the br
 
 Sets the entire html and body to baseline height and margin*/
 
+
 /*TO DO:
 
-1. Make sure to include viewport tags in all html files
-2. Ask about how to make the Nav bar not scroll across the page
+1. Ask about how to make the Nav bar not scroll across the page
  when resizing
- 4. Ask about which inspector should I use? Should I use the responsive
- tool or use the image pixels on the screen (currently using this
- and it is showing fine)
- 5. Ask about screen scaling (do we need to make 
+ 2. Ask about screen scaling (do we need to make 
  it look good from 980-768 or just 980?)
+ 3. Double check all of the sizes
+ 4. Do we deploy this assignemnt to Heroku?
 */
 
 html,
@@ -96,13 +95,6 @@ nav a:link {
 }
 
 
-/*This gives the nav bar a vistied link color of red(ish)*/
-
-nav a:visited {
-    color: #E45F56;
-}
-
-
 /*This give the nav bar mouse hover attributes*/
 
 nav a:hover {
@@ -110,6 +102,7 @@ nav a:hover {
     padding-bottom: 5px;
     font-size: 18px;
     transition: .5s;
+    color: #E45F56;
     /*font-weight: 25px;*/
 }
 
@@ -228,7 +221,6 @@ aside {
     height: 70px;
     width: 70px;
     padding: 20px 1px 10px 0;
-  
 }
 
 
@@ -248,6 +240,7 @@ aside {
 hr {
     border-top: solid 2px #dddddd;
 }
+
 
 /*This styles the footer.*/
 
@@ -284,7 +277,7 @@ footer {
     -ms-transition: all .5s ease;
     transition: all .5s ease;
     width: 250px;
-    height:270px;
+    height: 250px;
     /*This supercedes the previous section img width of 250px */
 }
 
@@ -435,19 +428,19 @@ h4 {
 }
 
 
-
 /*Media Queries to ensure proper viewing on every device - responsiveness */
+
 @media screen and (max-width: 980px) {
-    html, body {
-        width:100%;
+    html,
+    body {
+        width: 100%;
         margin: 0;
     }
-    .container  {
-        width:100%;
+    .container {
+        width: 100%;
     }
-
     .header-container {
-        width:100%;
+        width: 100%;
     }
     .main-section {
         font-size: 1em;
@@ -455,21 +448,18 @@ h4 {
         width: 35%;
     }
     aside {
-        margin-right:40px;
+        margin-right: 150px;
     }
-
-    nav{
-        margin-right: 80px;
+    nav {
+        margin-right: 190px;
     }
-    
-    h1, section {
-       margin-left: 100px;
+    h1,
+    section {
+        margin-left: 100px;
     }
-
     h1 {
         padding: 30px 15px 30px 15px;
     }
-
     /*For the main.html page */
     .profile-pic {
         width: 100%;
@@ -477,70 +467,130 @@ h4 {
     }
     /*For the Portfolio page*/
     .image-container img {
-        width:100%;
+        width: 100%;
         margin: auto;
     }
     h4 {
-        width:100%;
+        width: 100%;
         padding: 15px 0;
     }
-    
-    .portfolio-left, .portfolio-right {
+    .portfolio-left,
+    .portfolio-right {
         float: none;
-        
     }
-
     .portfolio-left {
         padding-right: 0;
     }
-
 }
 
-
 @media screen and (max-width: 768px) {
-    html, body {
-        width:100%;
+    html,
+    body {
+        width: 100%;
         margin: 0;
     }
-    .container  {
-        width:100%;
+    .container {
+        width: 100%;
+        min-height: 0;
     }
-
     .header-container {
-        width:100%;
+        width: 100%;
     }
-
     .main-section {
-        width: 85%;
+        width: 80%;
     }
     aside {
-        width: 90%;
-        float:left;
+        width: 85%;
+        float: left;
         margin-left: 25px;
         margin-top: 0px;
     }
-
-    h1, section {
+    h1,
+    section {
         margin-left: 25px;
     }
-
     .profile-pic {
         float: left;
         margin-right: 15px;
         width: 250px;
-        height:270px;     
+        height: 250px;
     }
-
-
+    section img {
+        height: 250px;
+    }
+    .image-container img {
+        width: 300px;
+    }
+    .portfolio-left {
+        position: relative;
+        float: left;
+        padding-bottom: 30px;
+        /*padding-right: 20px;*/
+    }
+    .portfolio-right {
+        position: relative;
+        float: right;
+        padding-bottom: 30px;
+    }
 }
 
- @media screen and (max-width: 640px) {
-
-  .profile-pic {
+@media screen and (max-width: 640px) {
+    header {
+        position: static;
+    }
+    .container {
+        min-height: 0;
+    }
+    .main-section {
+        width: 85%;
+    }
+    aside {
+        width: 91%;
+    }
+    section {
+        margin-top: 15px;
+    }
+    aside,
+    section {
+        margin-left: 15px;
+    }
+    h1 {
+        margin: 0;
         width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    nav {
+        margin-top: -40px;
+        font-size: 18px;
+        margin-right: 45px;
+    }
+    nav a {
+        padding: 50px;
+    }
+    .profile-pic {
+        width: 100%;
+        height: 450px;
         padding-bottom: 10px;
     }
-
+    /*For the Portfolio page*/
+    .image-container img {
+        width: 105%;
+        height: 380px;
+        margin: auto;
     }
-
+    
+    h4 {
+        width: 100%;
+        padding: 15px 0;
+        top: 300px;
+    }
+    .portfolio-left,
+    .portfolio-right {
+        float: none;
+    }
+    .portfolio-left {
+        padding-right: 0;
+    }
+}
 
